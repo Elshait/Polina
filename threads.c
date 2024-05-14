@@ -10,7 +10,7 @@ void *mythread(void *dummy){
         printf("Thread %ld, Результат вычисления a= %d\n",mythid, a); // печать идентификатора текущего threadа и результата и значен>
         return NULL;
 
-}
+}// главная функция
 
 int main () {
         pthread_t thid, mythid;
