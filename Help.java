@@ -3,6 +3,7 @@ class Help {
                 throws java.io.IOException {
 
 		char choice, ignore;
+		for (;;) {
 
                 do {
                         System.out.println("справочная система:");
@@ -11,13 +12,15 @@ class Help {
 			System.out.println(" 3. for");
                         System.out.println(" 4. while");
                         System.out.println(" 5. do-while");
+			System.out.println("q - выход из программы");
 
                         System.out.println("Выберите подраздел: ");
                         choice = (char) System.in.read();
                         do {
                                 ignore = (char) System.in.read();
                         }while (ignore != '\n');
-                } while (choice < '1' | choice > '5');
+                } while (choice < '1' | choice > '5' & choice != 'q');
+		if (choice =='q') break;
 
                 System.out.println("\n");
 
@@ -56,8 +59,10 @@ class Help {
                     
 
 
+		}
+                System.out.println();
 
-
+		
                 }
         }
 }
