@@ -32,6 +32,18 @@ class Obj1 {
                 System.out.println ("ёмкость топливного бака : " + nissan.vfuel);
                 System.out.println ("тип кузова: " + nissan.type);
                 nissan.range();
+		System.out.println ("информация об автомобиле  \"форд\"");
+                System.out.println ("количество пассажиров: " +ford.kpass);
+                System.out.println ("ёмкость топливного бака : " + ford.vfuel);
+                System.out.println ("тип кузова: " + ford.type);
+                ford.range();
+                System.out.println ("информация об автомобиле  \"бмв\"");
+                System.out.println ("количество пассажиров: " +bmw.kpass);
+                System.out.println ("ёмкость топливного бака : " + bmw.vfuel);
+                System.out.println ("тип кузова: " + bmw.type);
+                bmw.range();
+
+
 
 
         }
