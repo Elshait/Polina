@@ -1,0 +1,52 @@
+// Абстрактный суперкласс для одежды
+abstract class Clothing {
+    private double basePrice;
+    public Clothing(double basePrice) {
+        this.basePrice = basePrice;
+    }
+
+    public double getBasePrice() {
+        return basePrice;
+    }
+
+    public abstract double calculateDiscountPrice();
+}
+
+// Класс для одежды "Футболка"
+class TShirt extends Clothing {
+    public TShirt(double basePrice) {
+        super(basePrice);
+    }
+
+   
+    public double calculateDiscountPrice() {
+        return getBasePrice() * 0.9; // Скидка 10%
+    }
+}
+
+// Класс для одежды "Джинсы"
+class Jeans extends Clothing {
+    public Jeans(double basePrice) {
+        super(basePrice);
+    }
+
+   
+    public double calculateDiscountPrice() {
+        return getBasePrice() * 0.8; // Скидка 20%
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Clothing tShirt = new TShirt(20.0);
+        Clothing jeans = new Jeans(50.0);
+
+        System.out.println("Футболка:");
+        System.out.println("Начальная цена: $" + tShirt.getBasePrice());
+        System.out.println("Цена со скидкой: $" + tShirt.calculateDiscountPrice());
+
+        System.out.println("\nДжинсы:");
+        System.out.println("Начальная цена: $" + jeans.getBasePrice());
+        System.out.println("Цена со скидкой: $" + jeans.calculateDiscountPrice());
+    }
+}
